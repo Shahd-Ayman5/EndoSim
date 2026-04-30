@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>EndoSim Pro — Endoscope Simulation System</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="mainLayout">
+    <!-- Left Panel: Video Display -->
+    <item>
+     <layout class="QVBoxLayout" name="leftPanel">
+      <item>
+       <widget class="QLabel" name="lblVideoFeed">
+        <property name="text"><string>VIDEO FEED</string></property>
+        <property name="alignment"><set>Qt::AlignCenter</set></property>
+        <property name="minimumSize">
+         <size><width>640</width><height>480</height></size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="lblProcessedFeed">
+        <property name="text"><string>PROCESSED FEED</string></property>
+        <property name="alignment"><set>Qt::AlignCenter</set></property>
+        <property name="minimumSize">
+         <size><width>640</width><height>200</height></size>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <!-- Right Panel: Controls -->
+    <item>
+     <layout class="QVBoxLayout" name="rightPanel">
+      <!-- Brightness -->
+      <item>
+       <widget class="QLabel" name="lblBrightnessTitle">
+        <property name="text"><string>Brightness</string></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSlider" name="sliderBrightness">
+        <property name="orientation"><enum>Qt::Horizontal</enum></property>
+        <property name="minimum"><number>0</number></property>
+        <property name="maximum"><number>200</number></property>
+        <property name="value"><number>100</number></property>
+       </widget>
+      </item>
+      <!-- Buttons -->
+      <item>
+       <widget class="QPushButton" name="btnCapture">
+        <property name="text"><string>Capture Frame</string></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnToggleProcessing">
+        <property name="text"><string>Toggle Processing</string></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnToggleSpotlight">
+        <property name="text"><string>Toggle Spotlight</string></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnLoadVideo">
+        <property name="text"><string>Load Video</string></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnExit">
+        <property name="text"><string>Exit</string></property>
+       </widget>
+      </item>
+      <!-- Feature Display -->
+      <item>
+       <widget class="QLabel" name="lblFeatureTitle">
+        <property name="text"><string>Feature Analysis</string></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="lblFeatureDisplay">
+        <property name="text"><string>No data yet</string></property>
+        <property name="wordWrap"><bool>true</bool></property>
+       </widget>
+      </item>
+      <!-- Navigation hint -->
+      <item>
+       <widget class="QLabel" name="lblNavHint">
+        <property name="text"><string>Navigation: W/A/S/D or Arrow Keys</string></property>
+        <property name="wordWrap"><bool>true</bool></property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar"/>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
